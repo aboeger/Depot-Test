@@ -8,6 +8,6 @@ class Product < ActiveRecord::Base
     message: 'must be a URL for GIF, JPG or PNG image.'
   }
   def self.latest
-    product.order(:updated_at).last
+    Product.order(:updated_at).last
   end
 end
